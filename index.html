@@ -3,336 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Санаторий Щучинск-Здоровье - премиальный отдых у озера Щучье в сердце Казахстана">
-    <meta name="keywords" content="санаторий, Щучинск, озеро Щучье, Кокшетау, Боровое, отдых, лечение, спа">
-    <title>Щучинск-Здоровье | Премиальный санаторий у озера Щучье</title>
+    <meta name="description" content="Санаторий Щучинск-Здоровье - премиальный отдых у озера Щучье в Казахстане. Лечебные процедуры, комфортные номера, халяль питание.">
+    <meta name="keywords" content="санаторий щучинск, отдых казахстан, озеро щучье, лечение, спа, боровое">
+    <meta name="author" content="Щучинск-Здоровье">
     
-    <!-- Google Fonts -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Санаторий Щучинск-Здоровье">
+    <meta property="og:description" content="Премиальный санаторно-курортный отдых в сердце Казахстана">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shchuchinsk-health.kz">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <title>Санаторий Щучинск-Здоровье | Премиальный отдых у озера Щучье</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
 </head>
-<body>
+<body class="body">
     <!-- Preloader -->
     <div class="preloader" id="preloader">
-        <div class="preloader__content">
-            <div class="preloader__logo">Щ</div>
-            <div class="preloader__text">Щучинск-Здоровье</div>
-            <div class="preloader__spinner"></div>
-        </div>
+        <div class="preloader__spinner"></div>
+        <p class="preloader__text">Щучинск-Здоровье</p>
     </div>
 
     <!-- Header -->
-    <header class="header" id="header">
+    <header class="header header--transparent" id="header">
         <div class="container header__container">
-            <a href="#" class="header__logo">
-                <span class="header__logo-icon">Щ</span>
-                <span class="header__logo-text">Щучинск-Здоровье</span>
+            <a href="index.html" class="header__logo">
+                <span class="header__logo-icon">🌿</span>
+                <span class="header__logo-text">Щучинск-<strong>Здоровье</strong></span>
             </a>
             
-            <nav class="header__nav" id="nav">
+            <nav class="header__nav" id="mainNav">
                 <ul class="header__menu">
-                    <li class="header__menu-item"><a href="#about" class="header__menu-link">О нас</a></li>
-                    <li class="header__menu-item"><a href="#rooms" class="header__menu-link">Номера</a></li>
-                    <li class="header__menu-item"><a href="#services" class="header__menu-link">Услуги</a></li>
-                    <li class="header__menu-item"><a href="#gallery" class="header__menu-link">Галерея</a></li>
-                    <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
+                    <li class="header__menu-item">
+                        <a href="pages/about.html" class="header__menu-link">О санатории</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/rooms.html" class="header__menu-link">Номера</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/services.html" class="header__menu-link">Услуги</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/treatments.html" class="header__menu-link">Лечение</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/gallery.html" class="header__menu-link">Галерея</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/contacts.html" class="header__menu-link">Контакты</a>
+                    </li>
                 </ul>
             </nav>
             
-            <button class="header__btn btn btn--gold" aria-label="Забронировать номер">
-                Забронировать
-            </button>
-            
-            <button class="header__burger" id="burgerBtn" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="header__actions">
+                <a href="pages/booking.html" class="btn btn--gold header__book-btn">Забронировать</a>
+                <button class="header__burger" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobileMenu">
-        <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__list">
-                <li><a href="#about" class="mobile-menu__link">О нас</a></li>
-                <li><a href="#rooms" class="mobile-menu__link">Номера</a></li>
-                <li><a href="#services" class="mobile-menu__link">Услуги</a></li>
-                <li><a href="#gallery" class="mobile-menu__link">Галерея</a></li>
-                <li><a href="#contacts" class="mobile-menu__link">Контакты</a></li>
-            </ul>
-            <button class="mobile-menu__btn btn btn--gold" id="mobileBookBtn">Забронировать</button>
-        </nav>
+        <div class="mobile-menu__content">
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Закрыть меню">&times;</button>
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li><a href="pages/about.html" class="mobile-menu__link">О санатории</a></li>
+                    <li><a href="pages/rooms.html" class="mobile-menu__link">Номера</a></li>
+                    <li><a href="pages/services.html" class="mobile-menu__link">Услуги</a></li>
+                    <li><a href="pages/treatments.html" class="mobile-menu__link">Лечение</a></li>
+                    <li><a href="pages/gallery.html" class="mobile-menu__link">Галерея</a></li>
+                    <li><a href="pages/contacts.html" class="mobile-menu__link">Контакты</a></li>
+                    <li><a href="pages/booking.html" class="mobile-menu__link mobile-menu__link--accent">Забронировать</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 
-    <main>
+    <main class="main">
         <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero__bg parallax-bg" data-speed="0.5">
-                <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80" alt="Озеро Щучье и горы Кокшетау" class="hero__image">
-            </div>
+        <section class="hero hero--parallax">
             <div class="hero__overlay"></div>
-            <div class="container hero__container">
-                <div class="hero__content">
-                    <h1 class="hero__title fade-in-up">
-                        Ваше идеальное восстановление<br>в сердце Щучинска
-                    </h1>
-                    <p class="hero__subtitle fade-in-up" data-delay="200">
-                        Санаторно-курортный отдых у подножия гор Кокшетау,<br>на берегу кристально чистого озера Щучье
-                    </p>
-                </div>
+            <div class="hero__content container">
+                <h1 class="hero__title animate-on-scroll">
+                    Ваше идеальное восстановление<br>в сердце <span class="hero__highlight">Щучинска</span>
+                </h1>
+                <p class="hero__subtitle animate-on-scroll">
+                    Санаторно-курортный отдых у подножия гор Кокшетау на берегу озера Щучье
+                </p>
                 
-                <!-- Booking Form -->
-                <form class="hero__booking booking-form fade-in-up" data-delay="400" id="bookingForm">
-                    <h3 class="booking-form__title">Быстрое бронирование</h3>
-                    <div class="booking-form__row">
-                        <div class="booking-form__group">
-                            <label for="checkIn" class="booking-form__label">Дата заезда</label>
-                            <input type="date" id="checkIn" class="booking-form__input" required aria-label="Дата заезда">
+                <!-- Booking Form Widget -->
+                <div class="hero__booking booking-widget animate-on-scroll">
+                    <form class="booking-widget__form" id="quickBookingForm">
+                        <div class="booking-widget__group">
+                            <label for="checkIn" class="booking-widget__label">Дата заезда</label>
+                            <input type="date" id="checkIn" class="booking-widget__input" required>
                         </div>
-                        <div class="booking-form__group">
-                            <label for="checkOut" class="booking-form__label">Дата выезда</label>
-                            <input type="date" id="checkOut" class="booking-form__input" required aria-label="Дата выезда">
+                        <div class="booking-widget__group">
+                            <label for="checkOut" class="booking-widget__label">Дата выезда</label>
+                            <input type="date" id="checkOut" class="booking-widget__input" required>
                         </div>
-                        <div class="booking-form__group">
-                            <label for="guests" class="booking-form__label">Гостей</label>
-                            <select id="guests" class="booking-form__input" required aria-label="Количество гостей">
+                        <div class="booking-widget__group">
+                            <label for="guests" class="booking-widget__label">Гостей</label>
+                            <select id="guests" class="booking-widget__input">
                                 <option value="1">1 гость</option>
                                 <option value="2" selected>2 гостя</option>
                                 <option value="3">3 гостя</option>
-                                <option value="4">4 гостя</option>
-                                <option value="5+">5+ гостей</option>
+                                <option value="4">4+ гостей</option>
                             </select>
                         </div>
-                    </div>
-                    <button type="submit" class="booking-form__btn btn btn--gold btn--full">
-                        Найти номера
-                    </button>
-                </form>
+                        <button type="submit" class="btn btn--gold btn--large">Найти номер</button>
+                    </form>
+                </div>
             </div>
             
             <div class="hero__scroll-indicator">
-                <span class="hero__scroll-text">Листайте вниз</span>
+                <span>Листайте вниз</span>
                 <div class="hero__scroll-arrow"></div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about section" id="about">
+        <!-- About Preview -->
+        <section class="section about-preview">
             <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title fade-in">О Санатории</h2>
-                    <p class="section__subtitle fade-in">Преимущества отдыха в Щучинск-Здоровье</p>
+                <div class="about-preview__grid">
+                    <div class="about-preview__content">
+                        <h2 class="section-title">Добро пожаловать в <span class="section-title__highlight">Щучинск-Здоровье</span></h2>
+                        <p class="about-preview__text">
+                            Наш санаторий расположен в живописном месте на берегу озера Щучье, 
+                            у подножия величественных гор Кокшетау. Мы сочетаем многолетние традиции 
+                            курортного лечения с современными стандартами комфорта класса люкс.
+                        </p>
+                        <p class="about-preview__text">
+                            Уникальный микроклимат, целебный воздух соснового леса, собственные 
+                            минеральные источники и профессиональная команда специалистов помогут 
+                            вам восстановить силы и укрепить здоровье.
+                        </p>
+                        <a href="pages/about.html" class="btn btn--emerald">Подробнее о санатории</a>
+                    </div>
+                    <div class="about-preview__image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Санаторий Щучинск-Здоровье" loading="lazy">
+                    </div>
                 </div>
-                
-                <div class="about__grid grid-features">
-                    <article class="feature-card fade-in" data-delay="100">
-                        <div class="feature-card__icon">
-                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M32 4C32 4 8 28 8 40C8 51.0457 16.9543 60 28 60H36C47.0457 60 56 51.0457 56 40C56 28 32 4 32 4Z" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="32" cy="36" r="8" stroke="currentColor" stroke-width="2"/>
-                                <path d="M32 20V28" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section features bg-light">
+            <div class="container">
+                <h2 class="section-title section-title--center">Почему выбирают нас</h2>
+                <div class="features__grid">
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">💧</div>
                         <h3 class="feature-card__title">Собственный источник</h3>
-                        <p class="feature-card__text">Природная минеральная вода из артезианской скважины глубиной 300 метров</p>
+                        <p class="feature-card__text">Природная минеральная вода для лечебных процедур и питья</p>
                     </article>
                     
-                    <article class="feature-card fade-in" data-delay="200">
-                        <div class="feature-card__icon">
-                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="32" cy="36" rx="24" ry="8" stroke="currentColor" stroke-width="2"/>
-                                <path d="M8 36C8 36 8 52 32 52C56 52 56 36 56 36" stroke="currentColor" stroke-width="2"/>
-                                <path d="M32 20V36" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="32" cy="16" r="4" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">Лечебные грязи</h3>
-                        <p class="feature-card__text">Уникальные сульфидно-иловые грязи озера Молочное для оздоровления</p>
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🏊</div>
+                        <h3 class="feature-card__title">Бассейн с подогревом</h3>
+                        <p class="feature-card__text">Круглогодичный крытый бассейн с минеральной водой</p>
                     </article>
                     
-                    <article class="feature-card fade-in" data-delay="300">
-                        <div class="feature-card__icon">
-                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 28L28 12L44 28L52 20" stroke="currentColor" stroke-width="2"/>
-                                <rect x="8" y="28" width="48" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M24 28V56M40 28V56" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🥗</div>
                         <h3 class="feature-card__title">Халяль питание</h3>
-                        <p class="feature-card__text">Ресторан с меню по стандартам Халяль от шеф-повара</p>
+                        <p class="feature-card__text">Трехразовое диетическое питание по системе "шведский стол"</p>
                     </article>
                     
-                    <article class="feature-card fade-in" data-delay="400">
-                        <div class="feature-card__icon">
-                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="12" y="20" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 28H52" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="24" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M36 32V40M32 36H40" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">Бассейн</h3>
-                        <p class="feature-card__text">Крытый подогреваемый бассейн с панорамным видом на горы</p>
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🌿</div>
+                        <h3 class="feature-card__title">Лечебные грязи</h3>
+                        <p class="feature-card__text">Озерные грязи для восстановления опорно-двигательного аппарата</p>
+                    </article>
+                    
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🏔️</div>
+                        <h3 class="feature-card__title">Горный воздух</h3>
+                        <p class="feature-card__text">Уникальный микроклимат предгорья Кокшетау</p>
+                    </article>
+                    
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">💆</div>
+                        <h3 class="feature-card__title">SPA-комплекс</h3>
+                        <p class="feature-card__text">Массаж, сауна, хаммам и косметологические процедуры</p>
                     </article>
                 </div>
-                
-                <div class="about__info fade-in">
-                    <p class="about__text">
-                        Санаторий «Щучинск-Здоровье» расположен в живописном месте на берегу озера Щучье, 
-                        в окружении соснового леса и величественных гор Кокшетау. Мы сочетаем традиции 
-                        казахского гостеприимства с современными стандартами сервиса премиум-класса.
-                    </p>
-                </div>
             </div>
         </section>
 
-        <!-- Rooms Section -->
-        <section class="rooms section" id="rooms">
+        <!-- Rooms Preview -->
+        <section class="section rooms-preview">
             <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title fade-in">Наши Номера</h2>
-                    <p class="section__subtitle fade-in">Комфорт и уют в каждом деталях</p>
+                <div class="section-header">
+                    <h2 class="section-title">Наши номера</h2>
+                    <a href="pages/rooms.html" class="section-header__link">Все номера →</a>
                 </div>
                 
-                <div class="rooms__slider slider" id="roomsSlider">
-                    <div class="slider__track" id="sliderTrack">
-                        <!-- Room Cards will be inserted by JS -->
+                <div class="rooms-slider" id="roomsSlider">
+                    <div class="rooms-slider__track">
+                        <!-- Room cards will be inserted by JS -->
                     </div>
-                    
-                    <button class="slider__btn slider__btn--prev" id="sliderPrev" aria-label="Предыдущий слайд">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M15 18l-6-6 6-6"/>
-                        </svg>
-                    </button>
-                    <button class="slider__btn slider__btn--next" id="sliderNext" aria-label="Следующий слайд">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18l6-6-6-6"/>
-                        </svg>
-                    </button>
-                    
-                    <div class="slider__pagination" id="sliderPagination"></div>
+                    <button class="rooms-slider__btn rooms-slider__btn--prev" aria-label="Предыдущий слайд">‹</button>
+                    <button class="rooms-slider__btn rooms-slider__btn--next" aria-label="Следующий слайд">›</button>
                 </div>
+                
+                <div class="rooms-slider__dots" id="roomsSliderDots"></div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="services section" id="services">
+        <!-- Services Preview -->
+        <section class="section services-preview bg-emerald text-white">
             <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title fade-in">Услуги и Цены</h2>
-                    <p class="section__subtitle fade-in">Полный спектр оздоровительных процедур</p>
-                </div>
+                <h2 class="section-title section-title--light section-title--center">Услуги и процедуры</h2>
                 
-                <div class="services__accordion accordion" id="accordion">
-                    <!-- Accordion items will be inserted by JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section class="gallery section" id="gallery">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title fade-in">Галерея</h2>
-                    <p class="section__subtitle fade-in">Моменты вашего будущего отдыха</p>
-                </div>
-                
-                <div class="gallery__grid masonry-grid" id="masonryGrid">
-                    <!-- Gallery images will be inserted by JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Contacts Section -->
-        <section class="contacts section" id="contacts">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title fade-in">Контакты</h2>
-                    <p class="section__subtitle fade-in">Мы всегда рады ответить на ваши вопросы</p>
-                </div>
-                
-                <div class="contacts__wrapper">
-                    <div class="contacts__info fade-in">
-                        <div class="contact-item">
-                            <div class="contact-item__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
-                            </div>
-                            <div class="contact-item__content">
-                                <h4>Адрес</h4>
-                                <p>Казахстан, Акмолинская область,<br>г. Щучинск, ул. Курортная, 1</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-item__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-item__content">
-                                <h4>Телефон</h4>
-                                <p><a href="tel:+77163642000">+7 (71636) 4-20-00</a></p>
-                                <p><a href="tel:+77771234567">+7 (777) 123-45-67</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-item__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                            </div>
-                            <div class="contact-item__content">
-                                <h4>Email</h4>
-                                <p><a href="mailto:info@shchuchinsk.kz">info@shchuchinsk.kz</a></p>
-                                <p><a href="mailto:booking@shchuchinsk.kz">booking@shchuchinsk.kz</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="contacts__social">
-                            <h4>Мы в социальных сетях</h4>
-                            <div class="social-links">
-                                <a href="#" class="social-link" aria-label="Instagram">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="social-link" aria-label="Facebook">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="social-link" aria-label="WhatsApp">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-                                    </svg>
-                                </a>
-                            </div>
+                <div class="services-accordion">
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">Лечебные процедуры</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Физиотерапия</li>
+                                <li>Массаж (классический, точечный, ароматерапия)</li>
+                                <li>Гирудотерапия</li>
+                                <li>Ингаляции</li>
+                                <li>Электролечение</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <div class="contacts__map fade-in">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81268.84773409696!2d70.1366!3d52.9667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42e8c0a555555555%3A0x5555555555555555!2sShchuchinsk!5e0!3m2!1sen!2skz!4v1234567890" 
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Карта Щучинска">
-                        </iframe>
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">Водные процедуры</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Минеральные ванны</li>
+                                <li>Гидромассаж</li>
+                                <li>Подводный душ-массаж</li>
+                                <li>Жемчужные ванны</li>
+                                <li>Циркулярный душ</li>
+                            </ul>
+                        </div>
                     </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">SPA и релаксация</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Финская сауна</li>
+                                <li>Турецкий хаммам</li>
+                                <li>Соляная комната</li>
+                                <li>Косметологические процедуры</li>
+                                <li>Ароматерапия</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">Дополнительные услуги</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Экскурсии по достопримечательностям</li>
+                                <li>Прокат велосипедов и лыж</li>
+                                <li>Конференц-зал</li>
+                                <li>Трансфер из аэропорта</li>
+                                <li>Детская комната</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="pages/services.html" class="btn btn--gold">Все услуги и цены</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        <section class="section gallery-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Галерея</h2>
+                    <a href="pages/gallery.html" class="section-header__link">Смотреть все фото →</a>
+                </div>
+                
+                <div class="gallery-masonry" id="galleryPreview">
+                    <!-- Gallery items will be inserted by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials bg-light">
+            <div class="container">
+                <h2 class="section-title section-title--center">Отзывы наших гостей</h2>
+                
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonials-slider__track">
+                        <article class="testimonial-card">
+                            <div class="testimonial-card__rating">★★★★★</div>
+                            <p class="testimonial-card__text">
+                                "Превосходный санаторий! Номера чистые и уютные, персонал очень внимательный. 
+                                Лечение помогло справиться с проблемами спины. Обязательно вернемся снова!"
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Анна К." class="testimonial-card__avatar">
+                                <div>
+                                    <strong class="testimonial-card__name">Анна К.</strong>
+                                    <span class="testimonial-card__location">Астана, Казахстан</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="testimonial-card">
+                            <div class="testimonial-card__rating">★★★★★</div>
+                            <p class="testimonial-card__text">
+                                "Отдыхали семьей с детьми. Детям очень понравилось, есть детская площадка 
+                                и анимация. Халяль питание на высшем уровне. Природа вокруг невероятно красивая!"
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Марат О." class="testimonial-card__avatar">
+                                <div>
+                                    <strong class="testimonial-card__name">Марат О.</strong>
+                                    <span class="testimonial-card__location">Алматы, Казахстан</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="testimonial-card">
+                            <div class="testimonial-card__rating">★★★★☆</div>
+                            <p class="testimonial-card__text">
+                                "Замечательное место для восстановления сил. Бассейн с минеральной водой - просто чудо. 
+                                Массажисты профессионалы своего дела. Единственное - хотелось бы больше развлечений вечером."
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Елена В." class="testimonial-card__avatar">
+                                <div>
+                                    <strong class="testimonial-card__name">Елена В.</strong>
+                                    <span class="testimonial-card__location">Москва, Россия</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2 class="cta-box__title">Готовы к незабываемому отдыху?</h2>
+                    <p class="cta-box__text">Забронируйте номер прямо сейчас и получите скидку 10% на первое посещение</p>
+                    <a href="pages/booking.html" class="btn btn--gold btn--large">Забронировать номер</a>
                 </div>
             </div>
         </section>
@@ -341,47 +387,74 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__top">
-                <div class="footer__logo">
-                    <span class="footer__logo-icon">Щ</span>
-                    <span class="footer__logo-text">Щучинск-Здоровье</span>
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🌿</span>
+                        <span class="footer__logo-text">Щучинск-<strong>Здоровье</strong></span>
+                    </a>
+                    <p class="footer__description">
+                        Премиальный санаторно-курортный комплекс в сердце Казахстана. 
+                        Восстановление здоровья в гармонии с природой.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="footer__social-link" aria-label="WhatsApp">💬</a>
+                        <a href="#" class="footer__social-link" aria-label="Telegram">✈️</a>
+                    </div>
                 </div>
-                <p class="footer__tagline">Ваше здоровье — наша забота</p>
+                
+                <div class="footer__column">
+                    <h4 class="footer__title">Навигация</h4>
+                    <ul class="footer__links">
+                        <li><a href="pages/about.html">О санатории</a></li>
+                        <li><a href="pages/rooms.html">Номера</a></li>
+                        <li><a href="pages/services.html">Услуги</a></li>
+                        <li><a href="pages/treatments.html">Лечение</a></li>
+                        <li><a href="pages/gallery.html">Галерея</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__title">Услуги</h4>
+                    <ul class="footer__links">
+                        <li><a href="pages/treatments.html">Лечебные процедуры</a></li>
+                        <li><a href="pages/services.html">SPA-комплекс</a></li>
+                        <li><a href="pages/services.html">Бассейн</a></li>
+                        <li><a href="pages/services.html">Сауна и хаммам</a></li>
+                        <li><a href="pages/services.html">Экскурсии</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__title">Контакты</h4>
+                    <address class="footer__contact">
+                        <p>📍 Казахстан, Акмолинская область,<br>г. Щучинск, ул. Курортная, 1</p>
+                        <p>📞 <a href="tel:+77163600000">+7 (71636) 6-00-00</a></p>
+                        <p>📱 <a href="tel:+77770000000">+7 (777) 000-00-00</a></p>
+                        <p>✉️ <a href="mailto:info@shchuchinsk-health.kz">info@shchuchinsk-health.kz</a></p>
+                    </address>
+                </div>
             </div>
             
             <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2024 Санаторий «Щучинск-Здоровье». Все права защищены.</p>
-                <div class="footer__links">
+                <p>&copy; 2024 Санаторий «Щучинск-Здоровье». Все права защищены.</p>
+                <div class="footer__legal">
                     <a href="#">Политика конфиденциальности</a>
-                    <a href="#">Договор оферты</a>
+                    <a href="#">Публичная оферта</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 6L6 18M6 6l12 12"/>
-            </svg>
-        </button>
-        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Предыдущее фото">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 18l-6-6 6-6"/>
-            </svg>
-        </button>
-        <div class="lightbox__content">
-            <img src="" alt="" class="lightbox__image" id="lightboxImage">
-        </div>
-        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующее фото">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l6-6-6-6"/>
-            </svg>
-        </button>
-        <div class="lightbox__caption" id="lightboxCaption"></div>
-    </div>
-
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

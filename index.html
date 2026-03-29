@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Санаторий Щучинск-Здоровье - премиальный отдых у озера Щучье в Казахстане. Лечебные процедуры, комфортные номера, халяль питание.">
+    <meta name="keywords" content="санаторий щучинск, отдых казахстан, озеро щучье, лечение, спа, боровое">
+    <meta name="author" content="Щучинск-Здоровье">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Санаторий Щучинск-Здоровье">
+    <meta property="og:description" content="Премиальный санаторно-курортный отдых в сердце Казахстана">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shchuchinsk-health.kz">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <title>Санаторий Щучинск-Здоровье | Премиальный отдых у озера Щучье</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body class="body">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__spinner"></div>
+        <p class="preloader__text">Щучинск-Здоровье</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header header--transparent" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">
+                <span class="header__logo-icon">🌿</span>
+                <span class="header__logo-text">Щучинск-<strong>Здоровье</strong></span>
+            </a>
+            
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="pages/about.html" class="header__menu-link">О санатории</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/rooms.html" class="header__menu-link">Номера</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/services.html" class="header__menu-link">Услуги</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/treatments.html" class="header__menu-link">Лечение</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/gallery.html" class="header__menu-link">Галерея</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="pages/contacts.html" class="header__menu-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <a href="pages/booking.html" class="btn btn--gold header__book-btn">Забронировать</a>
+                <button class="header__burger" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__content">
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Закрыть меню">&times;</button>
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li><a href="pages/about.html" class="mobile-menu__link">О санатории</a></li>
+                    <li><a href="pages/rooms.html" class="mobile-menu__link">Номера</a></li>
+                    <li><a href="pages/services.html" class="mobile-menu__link">Услуги</a></li>
+                    <li><a href="pages/treatments.html" class="mobile-menu__link">Лечение</a></li>
+                    <li><a href="pages/gallery.html" class="mobile-menu__link">Галерея</a></li>
+                    <li><a href="pages/contacts.html" class="mobile-menu__link">Контакты</a></li>
+                    <li><a href="pages/booking.html" class="mobile-menu__link mobile-menu__link--accent">Забронировать</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--parallax">
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <h1 class="hero__title animate-on-scroll">
+                    Ваше идеальное восстановление<br>в сердце <span class="hero__highlight">Щучинска</span>
+                </h1>
+                <p class="hero__subtitle animate-on-scroll">
+                    Санаторно-курортный отдых у подножия гор Кокшетау на берегу озера Щучье
+                </p>
+                
+                <!-- Booking Form Widget -->
+                <div class="hero__booking booking-widget animate-on-scroll">
+                    <form class="booking-widget__form" id="quickBookingForm">
+                        <div class="booking-widget__group">
+                            <label for="checkIn" class="booking-widget__label">Дата заезда</label>
+                            <input type="date" id="checkIn" class="booking-widget__input" required>
+                        </div>
+                        <div class="booking-widget__group">
+                            <label for="checkOut" class="booking-widget__label">Дата выезда</label>
+                            <input type="date" id="checkOut" class="booking-widget__input" required>
+                        </div>
+                        <div class="booking-widget__group">
+                            <label for="guests" class="booking-widget__label">Гостей</label>
+                            <select id="guests" class="booking-widget__input">
+                                <option value="1">1 гость</option>
+                                <option value="2" selected>2 гостя</option>
+                                <option value="3">3 гостя</option>
+                                <option value="4">4+ гостей</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--gold btn--large">Найти номер</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="hero__scroll-indicator">
+                <span>Листайте вниз</span>
+                <div class="hero__scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="section about-preview">
+            <div class="container">
+                <div class="about-preview__grid">
+                    <div class="about-preview__content">
+                        <h2 class="section-title">Добро пожаловать в <span class="section-title__highlight">Щучинск-Здоровье</span></h2>
+                        <p class="about-preview__text">
+                            Наш санаторий расположен в живописном месте на берегу озера Щучье, 
+                            у подножия величественных гор Кокшетау. Мы сочетаем многолетние традиции 
+                            курортного лечения с современными стандартами комфорта класса люкс.
+                        </p>
+                        <p class="about-preview__text">
+                            Уникальный микроклимат, целебный воздух соснового леса, собственные 
+                            минеральные источники и профессиональная команда специалистов помогут 
+                            вам восстановить силы и укрепить здоровье.
+                        </p>
+                        <a href="pages/about.html" class="btn btn--emerald">Подробнее о санатории</a>
+                    </div>
+                    <div class="about-preview__image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Санаторий Щучинск-Здоровье" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section features bg-light">
+            <div class="container">
+                <h2 class="section-title section-title--center">Почему выбирают нас</h2>
+                <div class="features__grid">
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">💧</div>
+                        <h3 class="feature-card__title">Собственный источник</h3>
+                        <p class="feature-card__text">Природная минеральная вода для лечебных процедур и питья</p>
+                    </article>
+                    
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🏊</div>
+                        <h3 class="feature-card__title">Бассейн с подогревом</h3>
+                        <p class="feature-card__text">Круглогодичный крытый бассейн с минеральной водой</p>
+                    </article>
+                    
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🥗</div>
+                        <h3 class="feature-card__title">Халяль питание</h3>
+                        <p class="feature-card__text">Трехразовое диетическое питание по системе "шведский стол"</p>
+                    </article>
+                    
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🌿</div>
+                        <h3 class="feature-card__title">Лечебные грязи</h3>
+                        <p class="feature-card__text">Озерные грязи для восстановления опорно-двигательного аппарата</p>
+                    </article>
+                    
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">🏔️</div>
+                        <h3 class="feature-card__title">Горный воздух</h3>
+                        <p class="feature-card__text">Уникальный микроклимат предгорья Кокшетау</p>
+                    </article>
+                    
+                    <article class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon">💆</div>
+                        <h3 class="feature-card__title">SPA-комплекс</h3>
+                        <p class="feature-card__text">Массаж, сауна, хаммам и косметологические процедуры</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms Preview -->
+        <section class="section rooms-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Наши номера</h2>
+                    <a href="pages/rooms.html" class="section-header__link">Все номера →</a>
+                </div>
+                
+                <div class="rooms-slider" id="roomsSlider">
+                    <div class="rooms-slider__track">
+                        <!-- Room cards will be inserted by JS -->
+                    </div>
+                    <button class="rooms-slider__btn rooms-slider__btn--prev" aria-label="Предыдущий слайд">‹</button>
+                    <button class="rooms-slider__btn rooms-slider__btn--next" aria-label="Следующий слайд">›</button>
+                </div>
+                
+                <div class="rooms-slider__dots" id="roomsSliderDots"></div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="section services-preview bg-emerald text-white">
+            <div class="container">
+                <h2 class="section-title section-title--light section-title--center">Услуги и процедуры</h2>
+                
+                <div class="services-accordion">
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">Лечебные процедуры</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Физиотерапия</li>
+                                <li>Массаж (классический, точечный, ароматерапия)</li>
+                                <li>Гирудотерапия</li>
+                                <li>Ингаляции</li>
+                                <li>Электролечение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">Водные процедуры</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Минеральные ванны</li>
+                                <li>Гидромассаж</li>
+                                <li>Подводный душ-массаж</li>
+                                <li>Жемчужные ванны</li>
+                                <li>Циркулярный душ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">SPA и релаксация</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Финская сауна</li>
+                                <li>Турецкий хаммам</li>
+                                <li>Соляная комната</li>
+                                <li>Косметологические процедуры</li>
+                                <li>Ароматерапия</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <button class="service-item__header">
+                            <span class="service-item__title">Дополнительные услуги</span>
+                            <span class="service-item__icon">+</span>
+                        </button>
+                        <div class="service-item__content">
+                            <ul class="service-item__list">
+                                <li>Экскурсии по достопримечательностям</li>
+                                <li>Прокат велосипедов и лыж</li>
+                                <li>Конференц-зал</li>
+                                <li>Трансфер из аэропорта</li>
+                                <li>Детская комната</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="pages/services.html" class="btn btn--gold">Все услуги и цены</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        <section class="section gallery-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Галерея</h2>
+                    <a href="pages/gallery.html" class="section-header__link">Смотреть все фото →</a>
+                </div>
+                
+                <div class="gallery-masonry" id="galleryPreview">
+                    <!-- Gallery items will be inserted by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials bg-light">
+            <div class="container">
+                <h2 class="section-title section-title--center">Отзывы наших гостей</h2>
+                
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonials-slider__track">
+                        <article class="testimonial-card">
+                            <div class="testimonial-card__rating">★★★★★</div>
+                            <p class="testimonial-card__text">
+                                "Превосходный санаторий! Номера чистые и уютные, персонал очень внимательный. 
+                                Лечение помогло справиться с проблемами спины. Обязательно вернемся снова!"
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Анна К." class="testimonial-card__avatar">
+                                <div>
+                                    <strong class="testimonial-card__name">Анна К.</strong>
+                                    <span class="testimonial-card__location">Астана, Казахстан</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="testimonial-card">
+                            <div class="testimonial-card__rating">★★★★★</div>
+                            <p class="testimonial-card__text">
+                                "Отдыхали семьей с детьми. Детям очень понравилось, есть детская площадка 
+                                и анимация. Халяль питание на высшем уровне. Природа вокруг невероятно красивая!"
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Марат О." class="testimonial-card__avatar">
+                                <div>
+                                    <strong class="testimonial-card__name">Марат О.</strong>
+                                    <span class="testimonial-card__location">Алматы, Казахстан</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="testimonial-card">
+                            <div class="testimonial-card__rating">★★★★☆</div>
+                            <p class="testimonial-card__text">
+                                "Замечательное место для восстановления сил. Бассейн с минеральной водой - просто чудо. 
+                                Массажисты профессионалы своего дела. Единственное - хотелось бы больше развлечений вечером."
+                            </p>
+                            <div class="testimonial-card__author">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Елена В." class="testimonial-card__avatar">
+                                <div>
+                                    <strong class="testimonial-card__name">Елена В.</strong>
+                                    <span class="testimonial-card__location">Москва, Россия</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2 class="cta-box__title">Готовы к незабываемому отдыху?</h2>
+                    <p class="cta-box__text">Забронируйте номер прямо сейчас и получите скидку 10% на первое посещение</p>
+                    <a href="pages/booking.html" class="btn btn--gold btn--large">Забронировать номер</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🌿</span>
+                        <span class="footer__logo-text">Щучинск-<strong>Здоровье</strong></span>
+                    </a>
+                    <p class="footer__description">
+                        Премиальный санаторно-курортный комплекс в сердце Казахстана. 
+                        Восстановление здоровья в гармонии с природой.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="footer__social-link" aria-label="WhatsApp">💬</a>
+                        <a href="#" class="footer__social-link" aria-label="Telegram">✈️</a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__title">Навигация</h4>
+                    <ul class="footer__links">
+                        <li><a href="pages/about.html">О санатории</a></li>
+                        <li><a href="pages/rooms.html">Номера</a></li>
+                        <li><a href="pages/services.html">Услуги</a></li>
+                        <li><a href="pages/treatments.html">Лечение</a></li>
+                        <li><a href="pages/gallery.html">Галерея</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__title">Услуги</h4>
+                    <ul class="footer__links">
+                        <li><a href="pages/treatments.html">Лечебные процедуры</a></li>
+                        <li><a href="pages/services.html">SPA-комплекс</a></li>
+                        <li><a href="pages/services.html">Бассейн</a></li>
+                        <li><a href="pages/services.html">Сауна и хаммам</a></li>
+                        <li><a href="pages/services.html">Экскурсии</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4 class="footer__title">Контакты</h4>
+                    <address class="footer__contact">
+                        <p>📍 Казахстан, Акмолинская область,<br>г. Щучинск, ул. Курортная, 1</p>
+                        <p>📞 <a href="tel:+77163600000">+7 (71636) 6-00-00</a></p>
+                        <p>📱 <a href="tel:+77770000000">+7 (777) 000-00-00</a></p>
+                        <p>✉️ <a href="mailto:info@shchuchinsk-health.kz">info@shchuchinsk-health.kz</a></p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Санаторий «Щучинск-Здоровье». Все права защищены.</p>
+                <div class="footer__legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
